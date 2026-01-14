@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Market Research | Competitor Analysis Dashboard</title>
     <link rel="stylesheet" href="../components/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         function setActiveLink() {
             const currentPath = window.location.pathname.split('/').pop();
@@ -17,6 +18,73 @@
         }
         document.addEventListener('DOMContentLoaded', setActiveLink);
     </script>
+    <style>
+        .chart-container {
+            position: relative;
+            height: 280px;
+            margin-bottom: 16px;
+        }
+        .chart-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        .chart-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .chart-card h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+        .sources-list {
+            list-style: none;
+            padding: 0;
+        }
+        .sources-list li {
+            padding: 12px 16px;
+            border-bottom: 1px solid #f3f4f6;
+            font-size: 13px;
+        }
+        .sources-list li:last-child {
+            border-bottom: none;
+        }
+        .source-number {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 12px;
+        }
+        .source-title {
+            font-weight: 500;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+        .source-meta {
+            color: #6b7280;
+            font-size: 12px;
+        }
+        .source-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .source-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
@@ -107,90 +175,213 @@
                     </div>
                 </div>
                 <div class="dashboard-grid">
-                    <div class="card">
-                        <h2 class="card-title">Market Trends</h2>
-                        <div class="trend-item" style="margin-bottom: 16px;">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                                <span>Remote Work Adoption</span>
-                                <span>+30%</span>
-                            </div>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 75%; background-color: var(--primary-blue);"></div>
+                    <div class="chart-row">
+                        <div class="chart-card">
+                            <h3>HR Tech Market Size by Year ($B)</h3>
+                            <div class="chart-container">
+                                <canvas id="marketSizeChart"></canvas>
                             </div>
                         </div>
-                        <div class="trend-item" style="margin-bottom: 16px;">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                                <span>Global Talent Mobility</span>
-                                <span>+45%</span>
-                            </div>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 85%; background-color: var(--color-emerald);"></div>
-                            </div>
-                        </div>
-                        <div class="trend-item">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                                <span>AI in HR Tech</span>
-                                <span>+60%</span>
-                            </div>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 90%; background-color: var(--color-purple);"></div>
+                        <div class="chart-card">
+                            <h3>Global Payroll Platform Market Share</h3>
+                            <div class="chart-container">
+                                <canvas id="marketShareChart"></canvas>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <h2 class="card-title">Market Segmentation</h2>
-                        <div style="display: flex; flex-direction: column; gap: 12px;">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span>SMBs (1-100 employees)</span>
-                                <span style="font-weight: 600;">60%</span>
+                    <div class="chart-row">
+                        <div class="chart-card">
+                            <h3>Remote Work Adoption Trend (%)</h3>
+                            <div class="chart-container">
+                                <canvas id="remoteWorkChart"></canvas>
                             </div>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 60%; background-color: var(--primary-blue);"></div>
+                        </div>
+                        <div class="chart-card">
+                            <h3>Company Size Segmentation</h3>
+                            <div class="chart-container">
+                                <canvas id="companySizeChart"></canvas>
                             </div>
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span>Enterprise (1000+ employees)</span>
-                                <span style="font-weight: 600;">25%</span>
-                            </div>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 25%; background-color: var(--color-orange);"></div>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span>Startups</span>
-                                <span style="font-weight: 600;">15%</span>
-                            </div>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 15%; background-color: var(--color-emerald);"></div>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-card" style="grid-column: span 2;">
+                        <h3>AI Adoption in HR Tech (%)</h3>
+                        <div class="chart-container" style="height: 200px;">
+                            <canvas id="aiAdoptionChart"></canvas>
                         </div>
                     </div>
                     <div class="card" style="grid-column: span 2;">
-                        <h2 class="card-title">Key Market Insights</h2>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-                            <div>
-                                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Market Size</h3>
-                                <p style="font-size: 24px; font-weight: 700; color: var(--primary-blue); margin-bottom: 4px;">$50B</p>
-                                <p style="color: #6b7280;">Global HR Tech Market (2024)</p>
-                            </div>
-                            <div>
-                                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Growth Rate</h3>
-                                <p style="font-size: 24px; font-weight: 700; color: var(--color-emerald); margin-bottom: 4px;">25%</p>
-                                <p style="color: #6b7280;">CAGR through 2028</p>
-                            </div>
-                            <div>
-                                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Deel's Position</h3>
-                                <p style="font-size: 24px; font-weight: 700; color: var(--color-purple); margin-bottom: 4px;">#2</p>
-                                <p style="color: #6b7280;">Global Payroll Platforms</p>
-                            </div>
-                            <div>
-                                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Customer Growth</h3>
-                                <p style="font-size: 24px; font-weight: 700; color: var(--color-orange); margin-bottom: 4px;">40%</p>
-                                <p style="color: #6b7280;">YoY increase</p>
-                            </div>
-                        </div>
+                        <h2 class="card-title">Sources & References</h2>
+                        <ul class="sources-list">
+                            <li>
+                                <span class="source-number">1</span>
+                                <div class="source-title">Global Payroll 2024 Buyers Guide Executive Summary</div>
+                                <div class="source-meta">ISG Research | December 2024 | <a href="https://research.isg-one.com/buyers-guide/human_capital_management/global_payroll/2024" target="_blank" class="source-link">View Source</a></div>
+                            </li>
+                            <li>
+                                <span class="source-number">2</span>
+                                <div class="source-title">Multicountry Payroll 2024 Buyers Guide Executive Summary</div>
+                                <div class="source-meta">ISG Research | December 2024 | <a href="https://research.isg-one.com/buyers-guide/human_capital_management/multicountry_payroll/2024" target="_blank" class="source-link">View Source</a></div>
+                            </li>
+                            <li>
+                                <span class="source-number">3</span>
+                                <div class="source-title">2024 Gartner Market Guide for Multicountry Payroll Solutions</div>
+                                <div class="source-meta">UKG/Gartner | March 2024 | <a href="https://www.ukg.com/resources/analyst-report/2024-gartner-market-guide-multicountry-payroll-solutions" target="_blank" class="source-link">View Source</a></div>
+                            </li>
+                            <li>
+                                <span class="source-number">4</span>
+                                <div class="source-title">Worldwide HCM & Payroll Applications Forecast 2024-2028</div>
+                                <div class="source-meta">IDC Research | October 2024 | <a href="https://www.marketresearch.com/IDC-v2477/Worldwide-Human-Capital-Management-Payroll-38530776/" target="_blank" class="source-link">View Source</a></div>
+                            </li>
+                            <li>
+                                <span class="source-number">5</span>
+                                <div class="source-title">Worldwide HCM & Payroll Applications Forecast 2024-2028</div>
+                                <div class="source-meta">GII Research | October 2024 | <a href="https://www.giiresearch.com/report/id1573625-worldwide-human-capital-management-payroll.html" target="_blank" class="source-link">View Source</a></div>
+                            </li>
+                            <li>
+                                <span class="source-number">6</span>
+                                <div class="source-title">ISG ProviderLens Quadrant Report - Payroll Solutions and Services</div>
+                                <div class="source-meta">Mercans | September 2024 | <a href="https://mercans.com/wp-content/uploads/2024/09/Mercans-Global-Payroll-Services-2024.pdf" target="_blank" class="source-link">View Source</a></div>
+                            </li>
+                            <li>
+                                <span class="source-number">7</span>
+                                <div class="source-title">2025 Global Payroll Benchmarking Survey</div>
+                                <div class="source-meta">Deloitte | May 2025 | <a href="https://www2.deloitte.com/us/en/pages/human-capital/articles/payroll-operations-survey.html" target="_blank" class="source-link">View Source</a></div>
+                            </li>
+                            <li>
+                                <span class="source-number">8</span>
+                                <div class="source-title">2024 Payroll Tech Trends: Globalization, GenAI and On-Demand Pay</div>
+                                <div class="source-meta">SHRM | February 2024 | <a href="https://www.shrm.org/topics-tools/news/technology/2024-payroll-tech-trends-globalization-genai-ondemand-pay" target="_blank" class="source-link">View Source</a></div>
+                            </li>
+                            <li>
+                                <span class="source-number">9</span>
+                                <div class="source-title">Mercans is Global Leader in Payroll Tech for Second Year in ISG Report</div>
+                                <div class="source-meta">HR Tech Cube | October 2024 | <a href="https://hrtechcube.com/mercans-is-global-leader-in-payroll-tech-for-second-year-in-isg-report/" target="_blank" class="source-link">View Source</a></div>
+                            </li>
+                            <li>
+                                <span class="source-number">10</span>
+                                <div class="source-title">HR Trends Report</div>
+                                <div class="source-meta">Anvil | November 2024 | <a href="https://useanvil.com/forms/hr-technology/hr-trends-report" target="_blank" class="source-link">View Source</a></div>
+                            </li>
+                        </ul>
                     </div>
-                
+                </div>
         </div>
     </div>
+
+    <script>
+        // Chart.js Global Defaults
+        Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+        Chart.defaults.font.size = 11;
+        Chart.defaults.color = '#6b7280';
+
+        // Chart 1: HR Tech Market Size by Year (Bar Chart)
+        new Chart(document.getElementById('marketSizeChart'), {
+            type: 'bar',
+            data: {
+                labels: ['2020', '2021', '2022', '2023', '2024'],
+                datasets: [{
+                    label: 'Market Size ($B)',
+                    data: [32, 38, 42, 47, 50],
+                    backgroundColor: '#2563eb',
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, grid: { color: '#f3f4f6' } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // Chart 2: Global Payroll Platform Market Share (Pie Chart)
+        new Chart(document.getElementById('marketShareChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Deel', 'Paycom', 'ADP', 'Rippling', 'Other'],
+                datasets: [{
+                    data: [18, 15, 22, 12, 33],
+                    backgroundColor: ['#2563eb', '#10b981', '#f59e0b', '#8b5cf6', '#e5e7eb']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'right', labels: { boxWidth: 12, padding: 12 } }
+                }
+            }
+        });
+
+        // Chart 3: Remote Work Adoption Trend (Bar Chart)
+        new Chart(document.getElementById('remoteWorkChart'), {
+            type: 'bar',
+            data: {
+                labels: ['2020', '2021', '2022', '2023', '2024'],
+                datasets: [{
+                    label: 'Adoption Rate (%)',
+                    data: [30, 58, 42, 38, 45],
+                    backgroundColor: '#10b981',
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, max: 100, grid: { color: '#f3f4f6' } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // Chart 4: Company Size Segmentation (Pie Chart)
+        new Chart(document.getElementById('companySizeChart'), {
+            type: 'pie',
+            data: {
+                labels: ['SMB (1-100)', 'Mid-Market (100-1000)', 'Enterprise (1000+)'],
+                datasets: [{
+                    data: [55, 25, 20],
+                    backgroundColor: ['#2563eb', '#8b5cf6', '#f59e0b']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'right', labels: { boxWidth: 12, padding: 12 } }
+                }
+            }
+        });
+
+        // Chart 5: AI Adoption in HR Tech (Bar Chart - Horizontal)
+        new Chart(document.getElementById('aiAdoptionChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Chatbots', 'Payroll Automation', 'Recruitment AI', 'Analytics', 'Compliance AI'],
+                datasets: [{
+                    label: 'Adoption (%)',
+                    data: [65, 45, 38, 42, 28],
+                    backgroundColor: ['#2563eb', '#10b981', '#8b5cf6', '#f59e0b', '#ef4444'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { beginAtZero: true, max: 100, grid: { color: '#f3f4f6' } },
+                    y: { grid: { display: false } }
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
