@@ -19,11 +19,32 @@
         document.addEventListener('DOMContentLoaded', setActiveLink);
     </script>
     <style>
+        body {
+            margin: 0;
+            padding: 12px;
+            height: 100vh;
+            box-sizing: border-box;
+            background-color: #f3f4f6;
+        }
+        .window-frame {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 260px;
+            flex-shrink: 0;
+        }
+        .main-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 24px;
+        }
         .charts-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
-            margin-bottom: 24px;
         }
         .chart-wrapper {
             background: white;
@@ -46,6 +67,8 @@
             border: 1px solid #e5e7eb;
             border-radius: 12px;
             padding: 20px;
+            grid-column: span 2;
+            margin-top: 0;
         }
         .sources-list {
             list-style: none;
@@ -181,46 +204,43 @@
                 </div>
             </div>
 
-            <div class="dashboard-grid">
-                <div class="charts-grid">
-                    <div class="chart-wrapper">
-                        <h3>HR Tech Market Size by Year ($B)</h3>
-                        <div class="chart-box">
-                            <canvas id="marketSizeChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-wrapper">
-                        <h3>Global Payroll Platform Market Share</h3>
-                        <div class="chart-box">
-                            <canvas id="marketShareChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-wrapper">
-                        <h3>Remote Work Adoption Trend (%)</h3>
-                        <div class="chart-box">
-                            <canvas id="remoteWorkChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-wrapper">
-                        <h3>Company Size Segmentation</h3>
-                        <div class="chart-box">
-                            <canvas id="companySizeChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-wrapper">
-                        <h3>AI Adoption in HR Tech (%)</h3>
-                        <div class="chart-box">
-                            <canvas id="aiAdoptionChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-wrapper">
-                        <h3>Customer Satisfaction by Platform</h3>
-                        <div class="chart-box">
-                            <canvas id="csatChart"></canvas>
-                        </div>
+            <div class="charts-grid">
+                <div class="chart-wrapper">
+                    <h3>HR Tech Market Size by Year ($B)</h3>
+                    <div class="chart-box">
+                        <canvas id="marketSizeChart"></canvas>
                     </div>
                 </div>
-
+                <div class="chart-wrapper">
+                    <h3>Global Payroll Platform Market Share</h3>
+                    <div class="chart-box">
+                        <canvas id="marketShareChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Remote Work Adoption Trend (%)</h3>
+                    <div class="chart-box">
+                        <canvas id="remoteWorkChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Company Size Segmentation</h3>
+                    <div class="chart-box">
+                        <canvas id="companySizeChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>AI Adoption in HR Tech (%)</h3>
+                    <div class="chart-box">
+                        <canvas id="aiAdoptionChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Customer Satisfaction by Platform</h3>
+                    <div class="chart-box">
+                        <canvas id="csatChart"></canvas>
+                    </div>
+                </div>
                 <div class="sources-section">
                     <h2 class="card-title">Sources & References</h2>
                     <ul class="sources-list">
