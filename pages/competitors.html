@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitor Analysis | Competitor Analysis Dashboard</title>
+    <link rel="stylesheet" href="../components/common.css">
+    <script>
+        function setActiveLink() {
+            const currentPath = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes('competitors')) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+    </script>
+</head>
+<body>
+
+    <div class="window-frame">
+        <div class="sidebar">
+            <div class="mac-dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+
+            <div class="company-select">
+                <div class="avatar-box">D</div>
+                <span style="font-weight: 500; font-size: 14px;">Deel</span>
+                <svg class="icon" style="margin-left: auto; color: #9ca3af;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="executive-summary.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Executive Summary
+                </a>
+                <a href="brand-archetype.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Archetype
+                </a>
+                <a href="brand-book.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Book
+                </a>
+                <a href="market-research.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Research
+                </a>
+                <a href="gap-analysis.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Gap Analysis
+                </a>
+                <a href="market-size.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Size
+                </a>
+                <a href="customer-profiles.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Customer Profiles
+                </a>
+                <a href="competitors.html" class="nav-item active">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Competitors
+                </a>
+                <a href="legal-compliance.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Legal & Compliance
+                </a>
+                <a href="go-to-market.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Go To Market
+                </a>
+                <a href="business-plan.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Business Plan
+                </a>
+                <a href="financial-model.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Financial Model
+                </a>
+                <a href="team.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Team
+                </a>
+                <a href="pitch-deck.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Pitch Deck
+                </a>
+            </nav>
+        </div>
+        <div class="main-content">
+
+                <div class="header">
+                    <div>
+                        <h1>Competitor Analysis</h1>
+                        <p>Track how AI models mention competitors versus your brand.</p>
+                    </div>
+                    <div class="header-badges">
+                        <div class="live-badge">
+                            <span class="dot-green"></span> Live Demo
+                        </div>
+                        <div class="rank-badge">
+                            #1 in category
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card" style="grid-column: span 1 / span 1; @media(min-width: 1024px) { grid-column: span 2; }">
+                        <h2 class="card-title">AI Visibility Leaderboard</h2>
+                        <div class="leaderboard-row highlight">
+                            <span class="rank-num">#1</span>
+                            <div class="company-logo" style="background-color: var(--primary-blue);">D</div>
+                            <div class="row-content">
+                                <div class="row-header">
+                                    <span class="company-name">Deel (You)</span>
+                                    <div class="score-box">
+                                        <span class="change pos">+3</span>
+                                        <span class="score-val">88</span>
+                                    </div>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 88%; background-color: var(--primary-blue);"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leaderboard-row">
+                            <span class="rank-num">#2</span>
+                            <div class="company-logo" style="background-color: var(--color-purple);">R</div>
+                            <div class="row-content">
+                                <div class="row-header">
+                                    <span class="company-name">Rippling</span>
+                                    <div class="score-box">
+                                        <span class="change pos">+5</span>
+                                        <span class="score-val">78</span>
+                                    </div>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 78%; background-color: var(--color-purple);"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leaderboard-row">
+                            <span class="rank-num">#3</span>
+                            <div class="company-logo" style="background-color: var(--color-orange);">G</div>
+                            <div class="row-content">
+                                <div class="row-header">
+                                    <span class="company-name">Gusto</span>
+                                    <div class="score-box">
+                                        <span class="change neg">-2</span>
+                                        <span class="score-val">65</span>
+                                    </div>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 65%; background-color: var(--color-orange);"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leaderboard-row">
+                            <span class="rank-num">#4</span>
+                            <div class="company-logo" style="background-color: var(--color-emerald);">R</div>
+                            <div class="row-content">
+                                <div class="row-header">
+                                    <span class="company-name">Remote.com</span>
+                                    <div class="score-box">
+                                        <span class="change pos">+8</span>
+                                        <span class="score-val">52</span>
+                                    </div>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 52%; background-color: var(--color-emerald);"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leaderboard-row">
+                            <span class="rank-num">#5</span>
+                            <div class="company-logo" style="background-color: var(--color-pink);">P</div>
+                            <div class="row-content">
+                                <div class="row-header">
+                                    <span class="company-name">Papaya Global</span>
+                                    <div class="score-box">
+                                        <span class="change pos">+3</span>
+                                        <span class="score-val">47</span>
+                                    </div>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 47%; background-color: var(--color-pink);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Market Movements</h2>
+                        <div class="movement-item">
+                            <div class="movement-header">
+                                <span class="status-badge status-gaining">Gaining</span>
+                                <span class="movement-val val-green">+12%</span>
+                            </div>
+                            <h3 class="movement-title">Remote.com</h3>
+                            <p class="movement-desc">Up 12% in 'EOR platform' queries</p>
+                        </div>
+                        <div class="movement-item">
+                            <div class="movement-header">
+                                <span class="status-badge status-losing">Losing</span>
+                                <span class="movement-val val-red">-8%</span>
+                            </div>
+                            <h3 class="movement-title">Gusto</h3>
+                            <p class="movement-desc">Down 8% in 'payroll software' queries</p>
+                        </div>
+                        <div class="movement-item">
+                            <div class="movement-header">
+                                <span class="status-badge status-new">New</span>
+                                <span class="movement-val val-blue">New</span>
+                            </div>
+                            <h3 class="movement-title">Oyster HR</h3>
+                            <p class="movement-desc">First appeared in AI responses this week</p>
+                        </div>
+                    </div>
+                
+        </div>
+    </div>
+
+</body>
+</html>

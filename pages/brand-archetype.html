@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Archetype | Competitor Analysis Dashboard</title>
+    <link rel="stylesheet" href="../components/common.css">
+    <script>
+        function setActiveLink() {
+            const currentPath = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes('brand-archetype')) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+    </script>
+</head>
+<body>
+
+    <div class="window-frame">
+        <div class="sidebar">
+            <div class="mac-dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+
+            <div class="company-select">
+                <div class="avatar-box">D</div>
+                <span style="font-weight: 500; font-size: 14px;">Deel</span>
+                <svg class="icon" style="margin-left: auto; color: #9ca3af;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="executive-summary.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Executive Summary
+                </a>
+                <a href="brand-archetype.html" class="nav-item active">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Archetype
+                </a>
+                <a href="brand-book.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Book
+                </a>
+                <a href="market-research.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Research
+                </a>
+                <a href="gap-analysis.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Gap Analysis
+                </a>
+                <a href="market-size.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Size
+                </a>
+                <a href="customer-profiles.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Customer Profiles
+                </a>
+                <a href="competitors.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Competitors
+                </a>
+                <a href="legal-compliance.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Legal & Compliance
+                </a>
+                <a href="go-to-market.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Go To Market
+                </a>
+                <a href="business-plan.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Business Plan
+                </a>
+                <a href="financial-model.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Financial Model
+                </a>
+                <a href="team.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Team
+                </a>
+                <a href="pitch-deck.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Pitch Deck
+                </a>
+            </nav>
+        </div>
+        <div class="main-content">
+
+                <div class="header">
+                    <div>
+                        <h1>Brand Archetype</h1>
+                        <p>Analysis of Deel's brand personality using archetypal frameworks and strategic positioning.</p>
+                    </div>
+                    <div class="header-badges">
+                        <div class="live-badge">
+                            <span class="dot-green"></span> Live Demo
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card" style="grid-column: span 2; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); padding: 32px;">
+                        <h2 class="card-title">Complete Archetype Framework</h2>
+                        <p style="color: #6b7280; margin-bottom: 24px; font-size: 14px;">Top 3 archetypes for Deel are highlighted. Other archetypes are shown for complete reference.</p>
+                        <div style="overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse; font-size: 14px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
+                                <thead>
+                                    <tr style="background: #f9fafb;">
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #e5e7eb; font-weight: 600;">Archetype</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #e5e7eb; font-weight: 600;">Definition</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #e5e7eb; font-weight: 600;">Human Need & Desires</th>
+                                        <th style="padding: 12px; text-align: left; border-bottom: 1px solid #e5e7eb; font-weight: 600;">Personality Trait</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="background: #dbeafe;">
+                                        <td style="padding: 16px; font-weight: 700; color: #1e40af; font-size: 18px;">🥇 Creator</td>
+                                        <td style="padding: 16px; color: #374151;">AI-powered platform, tech-first solution, innovative approach to global HR challenges</td>
+                                        <td style="padding: 16px; color: #374151;">Self-Expression</td>
+                                        <td style="padding: 16px; color: #374151;">Imaginative, Independent, Creative</td>
+                                    </tr>
+                                    <tr style="background: #d1fae5;">
+                                        <td style="padding: 16px; font-weight: 700; color: #047857; font-size: 18px;">🥈 Caregiver</td>
+                                        <td style="padding: 16px; color: #374151;">Employee protection, compliance, smooth onboarding, nurturing environment</td>
+                                        <td style="padding: 16px; color: #374151;">Safety / Nurturing</td>
+                                        <td style="padding: 16px; color: #374151;">Compassionate, Generous, Honest</td>
+                                    </tr>
+                                    <tr style="background: #fef3c7;">
+                                        <td style="padding: 16px; font-weight: 700; color: #92400e; font-size: 18px;">🥉 Sage</td>
+                                        <td style="padding: 16px; color: #374151;">Deep expertise in 150+ countries' employment laws, wise authority in global HR</td>
+                                        <td style="padding: 16px; color: #374151;">Understanding / Knowledge</td>
+                                        <td style="padding: 16px; color: #374151;">Intelligent, Curious, Wise</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; font-weight: 600; color: #374151;">Ruler</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Power, dominant, and control; Leader, the boss</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Control / Stability</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Reliable, Tough, Upper Class</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; font-weight: 600; color: #374151;">Jester</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Fun, playful, and comedian; Prankster</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Enjoyment</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Genuine, Charming, Imaginative</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; font-weight: 600; color: #374151;">Lover</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Intimate, romantic, sensual, passionate; Seductive</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Intimacy</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Welcoming, Charming, Embraced</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; font-weight: 600; color: #374151;">Citizen / Everyman</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">The working-class common person; Relatable</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Belonging</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Welcoming, Reliable, Genuine</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; font-weight: 600; color: #374151;">Outlaw / Rebel</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Wild, rebellious, and risk taker; Rule-breaker</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Liberation</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Adventure, Tough, Charming</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; font-weight: 600; color: #374151;">Magician</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Visionary, alchemist, and mystical; Magical</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Power</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Embraced, Reliable, Imaginative</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; font-weight: 600; color: #374151;">Hero</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Courageous, warrior, motivator; Brave</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Mastery</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Adventure, Genuine, Tough</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; font-weight: 600; color: #374151;">Explorer</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Free, adventurous, independent</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Freedom</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Adventure, Unique, Tough</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; font-weight: 600; color: #374151;">Innocent</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Pure, faithful, naive, childlike character; Symbolizing renewal</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Safety</td>
+                                        <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #374151;">Genuine, Unique, Reliable</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                        
+        </div>
+    </div>
+
+</body>
+</html>

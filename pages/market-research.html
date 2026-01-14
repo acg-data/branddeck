@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research | Competitor Analysis Dashboard</title>
+    <link rel="stylesheet" href="../components/common.css">
+    <script>
+        function setActiveLink() {
+            const currentPath = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes('market-research')) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+    </script>
+</head>
+<body>
+
+    <div class="window-frame">
+        <div class="sidebar">
+            <div class="mac-dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+
+            <div class="company-select">
+                <div class="avatar-box">D</div>
+                <span style="font-weight: 500; font-size: 14px;">Deel</span>
+                <svg class="icon" style="margin-left: auto; color: #9ca3af;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="executive-summary.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Executive Summary
+                </a>
+                <a href="brand-archetype.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Archetype
+                </a>
+                <a href="brand-book.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Book
+                </a>
+                <a href="market-research.html" class="nav-item active">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Research
+                </a>
+                <a href="gap-analysis.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Gap Analysis
+                </a>
+                <a href="market-size.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Size
+                </a>
+                <a href="customer-profiles.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Customer Profiles
+                </a>
+                <a href="competitors.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Competitors
+                </a>
+                <a href="legal-compliance.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Legal & Compliance
+                </a>
+                <a href="go-to-market.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Go To Market
+                </a>
+                <a href="business-plan.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Business Plan
+                </a>
+                <a href="financial-model.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Financial Model
+                </a>
+                <a href="team.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Team
+                </a>
+                <a href="pitch-deck.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Pitch Deck
+                </a>
+            </nav>
+        </div>
+        <div class="main-content">
+
+                <div class="header">
+                    <div>
+                        <h1>Market Research</h1>
+                        <p>Data-driven insights into the HR tech and global payroll market.</p>
+                    </div>
+                    <div class="header-badges">
+                        <div class="live-badge">
+                            <span class="dot-green"></span> Live Demo
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h2 class="card-title">Market Trends</h2>
+                        <div class="trend-item" style="margin-bottom: 16px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span>Remote Work Adoption</span>
+                                <span>+30%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 75%; background-color: var(--primary-blue);"></div>
+                            </div>
+                        </div>
+                        <div class="trend-item" style="margin-bottom: 16px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span>Global Talent Mobility</span>
+                                <span>+45%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 85%; background-color: var(--color-emerald);"></div>
+                            </div>
+                        </div>
+                        <div class="trend-item">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span>AI in HR Tech</span>
+                                <span>+60%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 90%; background-color: var(--color-purple);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Market Segmentation</h2>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span>SMBs (1-100 employees)</span>
+                                <span style="font-weight: 600;">60%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 60%; background-color: var(--primary-blue);"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span>Enterprise (1000+ employees)</span>
+                                <span style="font-weight: 600;">25%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 25%; background-color: var(--color-orange);"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span>Startups</span>
+                                <span style="font-weight: 600;">15%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 15%; background-color: var(--color-emerald);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="grid-column: span 2;">
+                        <h2 class="card-title">Key Market Insights</h2>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                            <div>
+                                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Market Size</h3>
+                                <p style="font-size: 24px; font-weight: 700; color: var(--primary-blue); margin-bottom: 4px;">$50B</p>
+                                <p style="color: #6b7280;">Global HR Tech Market (2024)</p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Growth Rate</h3>
+                                <p style="font-size: 24px; font-weight: 700; color: var(--color-emerald); margin-bottom: 4px;">25%</p>
+                                <p style="color: #6b7280;">CAGR through 2028</p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Deel's Position</h3>
+                                <p style="font-size: 24px; font-weight: 700; color: var(--color-purple); margin-bottom: 4px;">#2</p>
+                                <p style="color: #6b7280;">Global Payroll Platforms</p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Customer Growth</h3>
+                                <p style="font-size: 24px; font-weight: 700; color: var(--color-orange); margin-bottom: 4px;">40%</p>
+                                <p style="color: #6b7280;">YoY increase</p>
+                            </div>
+                        </div>
+                    </div>
+                
+        </div>
+    </div>
+
+</body>
+</html>

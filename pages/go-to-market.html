@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go To Market | Competitor Analysis Dashboard</title>
+    <link rel="stylesheet" href="../components/common.css">
+    <script>
+        function setActiveLink() {
+            const currentPath = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes('go-to-market')) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+    </script>
+</head>
+<body>
+
+    <div class="window-frame">
+        <div class="sidebar">
+            <div class="mac-dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+
+            <div class="company-select">
+                <div class="avatar-box">D</div>
+                <span style="font-weight: 500; font-size: 14px;">Deel</span>
+                <svg class="icon" style="margin-left: auto; color: #9ca3af;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="executive-summary.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Executive Summary
+                </a>
+                <a href="brand-archetype.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Archetype
+                </a>
+                <a href="brand-book.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Book
+                </a>
+                <a href="market-research.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Research
+                </a>
+                <a href="gap-analysis.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Gap Analysis
+                </a>
+                <a href="market-size.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Size
+                </a>
+                <a href="customer-profiles.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Customer Profiles
+                </a>
+                <a href="competitors.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Competitors
+                </a>
+                <a href="legal-compliance.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Legal & Compliance
+                </a>
+                <a href="go-to-market.html" class="nav-item active">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Go To Market
+                </a>
+                <a href="business-plan.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Business Plan
+                </a>
+                <a href="financial-model.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Financial Model
+                </a>
+                <a href="team.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Team
+                </a>
+                <a href="pitch-deck.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Pitch Deck
+                </a>
+            </nav>
+        </div>
+        <div class="main-content">
+
+                <div class="header">
+                    <div>
+                        <h1>Go To Market</h1>
+                        <p>Strategic launch plan and market expansion roadmap for Deel.</p>
+                    </div>
+                    <div class="header-badges">
+                        <div class="live-badge">
+                            <span class="dot-green"></span> Live Demo
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card" style="grid-column: span 2;">
+                        <h2 class="card-title">Launch Roadmap</h2>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+                            <div style="padding: 16px; border: 1px solid var(--primary-blue); border-radius: 8px; text-align: center;">
+                                <div style="font-size: 14px; font-weight: 600; color: var(--primary-blue); margin-bottom: 8px;">Phase 1</div>
+                                <div style="font-size: 12px; margin-bottom: 8px;">Q1-Q2 2024</div>
+                                <div style="font-size: 10px; color: #6b7280;">US Market Penetration</div>
+                                <div style="margin-top: 8px; padding: 4px 8px; background: var(--primary-blue); color: white; border-radius: 12px; font-size: 10px;">COMPLETED</div>
+                            </div>
+                            <div style="padding: 16px; border: 1px solid var(--color-emerald); border-radius: 8px; text-align: center;">
+                                <div style="font-size: 14px; font-weight: 600; color: var(--color-emerald); margin-bottom: 8px;">Phase 2</div>
+                                <div style="font-size: 12px; margin-bottom: 8px;">Q3-Q4 2024</div>
+                                <div style="font-size: 10px; color: #6b7280;">EU Expansion</div>
+                                <div style="margin-top: 8px; padding: 4px 8px; background: var(--color-emerald); color: white; border-radius: 12px; font-size: 10px;">IN PROGRESS</div>
+                            </div>
+                            <div style="padding: 16px; border: 1px solid var(--color-orange); border-radius: 8px; text-align: center;">
+                                <div style="font-size: 14px; font-weight: 600; color: var(--color-orange); margin-bottom: 8px;">Phase 3</div>
+                                <div style="font-size: 12px; margin-bottom: 8px;">2025</div>
+                                <div style="font-size: 10px; color: #6b7280;">APAC Growth</div>
+                                <div style="margin-top: 8px; padding: 4px 8px; background: #e5e7eb; color: #6b7280; border-radius: 12px; font-size: 10px;">PLANNED</div>
+                            </div>
+                            <div style="padding: 16px; border: 1px solid var(--color-pink); border-radius: 8px; text-align: center;">
+                                <div style="font-size: 14px; font-weight: 600; color: var(--color-pink); margin-bottom: 8px;">Phase 4</div>
+                                <div style="font-size: 12px; margin-bottom: 8px;">2026+</div>
+                                <div style="font-size: 10px; color: #6b7280;">Global Scale</div>
+                                <div style="margin-top: 8px; padding: 4px 8px; background: #e5e7eb; color: #6b7280; border-radius: 12px; font-size: 10px;">FUTURE</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Channel Strategy</h2>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span>Direct Sales</span>
+                                <span style="font-weight: 600;">60%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 60%; background-color: var(--primary-blue);"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span>Strategic Partnerships</span>
+                                <span style="font-weight: 600;">25%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 25%; background-color: var(--color-emerald);"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span>Digital Marketing</span>
+                                <span style="font-weight: 600;">15%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 15%; background-color: var(--color-orange);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Key Milestones</h2>
+                        <div class="milestone-item" style="margin-bottom: 16px;">
+                            <div class="milestone-header">
+                                <span>Product-Market Fit</span>
+                                <span>✓</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 100%; background-color: var(--color-emerald);"></div>
+                            </div>
+                        </div>
+                        <div class="milestone-item" style="margin-bottom: 16px;">
+                            <div class="milestone-header">
+                                <span>10,000 Customers</span>
+                                <span>✓</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 100%; background-color: var(--color-emerald);"></div>
+                            </div>
+                        </div>
+                        <div class="milestone-item" style="margin-bottom: 16px;">
+                            <div class="milestone-header">
+                                <span>$50M ARR</span>
+                                <span>✓</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 100%; background-color: var(--color-emerald);"></div>
+                            </div>
+                        </div>
+                        <div class="milestone-item">
+                            <div class="milestone-header">
+                                <span>$2.4B Valuation</span>
+                                <span>✓</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 100%; background-color: var(--color-emerald);"></div>
+                            </div>
+                        </div>
+                    </div>
+                
+        </div>
+    </div>
+
+</body>
+</html>

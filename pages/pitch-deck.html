@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Deck | Competitor Analysis Dashboard</title>
+    <link rel="stylesheet" href="../components/common.css">
+    <script>
+        function setActiveLink() {
+            const currentPath = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes('pitch-deck')) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+    </script>
+</head>
+<body>
+
+    <div class="window-frame">
+        <div class="sidebar">
+            <div class="mac-dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+
+            <div class="company-select">
+                <div class="avatar-box">D</div>
+                <span style="font-weight: 500; font-size: 14px;">Deel</span>
+                <svg class="icon" style="margin-left: auto; color: #9ca3af;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="executive-summary.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Executive Summary
+                </a>
+                <a href="brand-archetype.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Archetype
+                </a>
+                <a href="brand-book.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Book
+                </a>
+                <a href="market-research.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Research
+                </a>
+                <a href="gap-analysis.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Gap Analysis
+                </a>
+                <a href="market-size.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Size
+                </a>
+                <a href="customer-profiles.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Customer Profiles
+                </a>
+                <a href="competitors.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Competitors
+                </a>
+                <a href="legal-compliance.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Legal & Compliance
+                </a>
+                <a href="go-to-market.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Go To Market
+                </a>
+                <a href="business-plan.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Business Plan
+                </a>
+                <a href="financial-model.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Financial Model
+                </a>
+                <a href="team.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Team
+                </a>
+                <a href="pitch-deck.html" class="nav-item active">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Pitch Deck
+                </a>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <div>
+                    <h1>Pitch Deck</h1>
+                    <p>Investor presentation deck highlighting Deel's opportunity and traction.</p>
+                </div>
+                <div class="header-badges">
+                    <div class="live-badge">
+                        <span class="dot-green"></span> Live Demo
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-grid">
+                <div class="card" style="grid-column: span 2;">
+                    <h2 class="card-title">Pitch Deck Overview</h2>
+                    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;">
+                        <div style="text-align: center; padding: 16px; border: 1px solid var(--primary-blue); border-radius: 8px;">
+                            <div style="font-size: 18px; font-weight: 600; color: var(--primary-blue); margin-bottom: 8px;">1</div>
+                            <div style="font-size: 12px;">Problem</div>
+                            <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">Complex global hiring</div>
+                        </div>
+                        <div style="text-align: center; padding: 16px; border: 1px solid var(--color-emerald); border-radius: 8px;">
+                            <div style="font-size: 18px; font-weight: 600; color: var(--color-emerald); margin-bottom: 8px;">2</div>
+                            <div style="font-size: 12px;">Solution</div>
+                            <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">Deel platform</div>
+                        </div>
+                        <div style="text-align: center; padding: 16px; border: 1px solid var(--color-purple); border-radius: 8px;">
+                            <div style="font-size: 18px; font-weight: 600; color: var(--color-purple); margin-bottom: 8px;">3</div>
+                            <div style="font-size: 12px;">Market</div>
+                            <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">$500B opportunity</div>
+                        </div>
+                        <div style="text-align: center; padding: 16px; border: 1px solid var(--color-orange); border-radius: 8px;">
+                            <div style="font-size: 18px; font-weight: 600; color: var(--color-orange); margin-bottom: 8px;">4</div>
+                            <div style="font-size: 12px;">Product</div>
+                            <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">Platform demo</div>
+                        </div>
+                        <div style="text-align: center; padding: 16px; border: 1px solid var(--color-pink); border-radius: 8px;">
+                            <div style="font-size: 18px; font-weight: 600; color: var(--color-pink); margin-bottom: 8px;">5</div>
+                            <div style="font-size: 12px;">Traction</div>
+                            <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">10K+ customers</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;">
+                        <div style="text-align: center; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">6</div>
+                            <div style="font-size: 12px;">Business Model</div>
+                            <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">Subscription + fees</div>
+                        </div>
+                        <div style="text-align: center; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">7</div>
+                            <div style="font-size: 12px;">Competition</div>
+                            <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">Competitive advantage</div>
+                        </div>
+                        <div style="text-align: center; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">8</div>
+                            <div style="font-size: 12px;">Team</div>
+                            <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">Leadership overview</div>
+                        </div>
+                        <div style="text-align: center; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">9</div>
+                            <div style="font-size: 12px;">Financials</div>
+                            <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">Projections & metrics</div>
+                        </div>
+                        <div style="text-align: center; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">10</div>
+                            <div style="font-size: 12px;">Ask</div>
+                            <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">$20M Series A</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="card-title">Key Highlights</h2>
+                    <div style="font-size: 14px; line-height: 1.6;">
+                        <p><strong>Problem:</strong> Global hiring is complex, expensive, and risky</p>
+                        <p><strong>Solution:</strong> AI-powered platform that automates compliance and payments</p>
+                        <p><strong>Market:</strong> $500B workforce management market, 25% CAGR</p>
+                        <p><strong>Traction:</strong> 10,000+ companies, $50M ARR, 40% YoY growth</p>
+                        <p><strong>Team:</strong> Experienced founders from Google, leading HR tech companies</p>
+                        <p><strong>Ask:</strong> $20M Series A at $2.4B valuation</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="card-title">Investment Metrics</h2>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="metric-item">
+                            <div class="metric-value">$2.4B</div>
+                            <div class="metric-label">Pre-money Valuation</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">$20M</div>
+                            <div class="metric-label">Series A Ask</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">300%</div>
+                            <div class="metric-label">Projected IRR</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">18</div>
+                            <div class="metric-label">Months to Break-even</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

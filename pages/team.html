@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | Competitor Analysis Dashboard</title>
+    <link rel="stylesheet" href="../components/common.css">
+    <script>
+        function setActiveLink() {
+            const currentPath = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes('team')) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+    </script>
+</head>
+<body>
+
+    <div class="window-frame">
+        <div class="sidebar">
+            <div class="mac-dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+
+            <div class="company-select">
+                <div class="avatar-box">D</div>
+                <span style="font-weight: 500; font-size: 14px;">Deel</span>
+                <svg class="icon" style="margin-left: auto; color: #9ca3af;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="executive-summary.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Executive Summary
+                </a>
+                <a href="brand-archetype.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Archetype
+                </a>
+                <a href="brand-book.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Book
+                </a>
+                <a href="market-research.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Research
+                </a>
+                <a href="gap-analysis.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Gap Analysis
+                </a>
+                <a href="market-size.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Size
+                </a>
+                <a href="customer-profiles.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Customer Profiles
+                </a>
+                <a href="competitors.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Competitors
+                </a>
+                <a href="legal-compliance.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Legal & Compliance
+                </a>
+                <a href="go-to-market.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Go To Market
+                </a>
+                <a href="business-plan.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Business Plan
+                </a>
+                <a href="financial-model.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Financial Model
+                </a>
+                <a href="team.html" class="nav-item active">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Team
+                </a>
+                <a href="pitch-deck.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Pitch Deck
+                </a>
+            </nav>
+        </div>
+        <div class="main-content">
+
+                <div class="header">
+                    <div>
+                        <h1>Team</h1>
+                        <p>Leadership team and key personnel driving Deel's mission.</p>
+                    </div>
+                    <div class="header-badges">
+                        <div class="live-badge">
+                            <span class="dot-green"></span> Live Demo
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h2 class="card-title">Alex Bouaziz - CEO & Co-Founder</h2>
+                        <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                            <div style="width: 64px; height: 64px; background-color: var(--primary-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px; margin-right: 16px;">AB</div>
+                            <div>
+                                <div style="font-weight: 600; margin-bottom: 4px;">Former HR Tech Executive</div>
+                                <div style="font-size: 12px; color: #6b7280;">15+ years in HR technology and global workforce solutions</div>
+                            </div>
+                        </div>
+                        <div style="font-size: 14px; line-height: 1.6;">
+                            <p>Serial entrepreneur with deep expertise in HR automation and global compliance. Previously led HR operations at leading tech companies, scaling teams across 50+ countries.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Shuo Wang - CTO & Co-Founder</h2>
+                        <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                            <div style="width: 64px; height: 64px; background-color: var(--color-emerald); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px; margin-right: 16px;">SW</div>
+                            <div>
+                                <div style="font-weight: 600; margin-bottom: 4px;">Ex-Google Engineer</div>
+                                <div style="font-size: 12px; color: #6b7280;">AI/ML expert with 10+ years at top tech companies</div>
+                            </div>
+                        </div>
+                        <div style="font-size: 14px; line-height: 1.6;">
+                            <p>Technical visionary focused on AI-driven HR automation. Built large-scale systems at Google and Facebook, specializing in machine learning applications for enterprise software.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Key Leadership Team</h2>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div style="text-align: center; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                                <div style="font-weight: 600; margin-bottom: 8px;">VP of Product</div>
+                                <div style="font-size: 12px; color: #6b7280; margin-bottom: 8px;">Former product leader at SaaS companies</div>
+                                <div style="font-size: 10px; color: var(--primary-blue);">Product Strategy, Roadmap</div>
+                            </div>
+                            <div style="text-align: center; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                                <div style="font-weight: 600; margin-bottom: 8px;">VP of Sales</div>
+                                <div style="font-size: 12px; color: #6b7280; margin-bottom: 8px;">Enterprise sales expert</div>
+                                <div style="font-size: 10px; color: var(--color-emerald);">Revenue Growth, Partnerships</div>
+                            </div>
+                            <div style="text-align: center; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                                <div style="font-weight: 600; margin-bottom: 8px;">VP of Marketing</div>
+                                <div style="font-size: 12px; color: #6b7280; margin-bottom: 8px;">Growth marketing specialist</div>
+                                <div style="font-size: 10px; color: var(--color-orange);">Brand, Customer Acquisition</div>
+                            </div>
+                            <div style="text-align: center; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                                <div style="font-weight: 600; margin-bottom: 8px;">Head of Legal</div>
+                                <div style="font-size: 12px; color: #6b7280; margin-bottom: 8px;">Global employment law expert</div>
+                                <div style="font-size: 10px; color: var(--color-purple);">Compliance, Risk Management</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Team Composition</h2>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span>Engineering</span>
+                                <span style="font-weight: 600;">40%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 40%; background-color: var(--primary-blue);"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span>Product & Design</span>
+                                <span style="font-weight: 600;">20%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 20%; background-color: var(--color-emerald);"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span>Sales & Marketing</span>
+                                <span style="font-weight: 600;">20%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 20%; background-color: var(--color-orange);"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span>Operations & Legal</span>
+                                <span style="font-weight: 600;">20%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 20%; background-color: var(--color-purple);"></div>
+                            </div>
+                        </div>
+                    </div>
+                
+        </div>
+    </div>
+
+</body>
+</html>

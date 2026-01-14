@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal & Compliance | Competitor Analysis Dashboard</title>
+    <link rel="stylesheet" href="../components/common.css">
+    <script>
+        function setActiveLink() {
+            const currentPath = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes('legal-compliance')) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+    </script>
+</head>
+<body>
+
+    <div class="window-frame">
+        <div class="sidebar">
+            <div class="mac-dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+
+            <div class="company-select">
+                <div class="avatar-box">D</div>
+                <span style="font-weight: 500; font-size: 14px;">Deel</span>
+                <svg class="icon" style="margin-left: auto; color: #9ca3af;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="executive-summary.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Executive Summary
+                </a>
+                <a href="brand-archetype.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Archetype
+                </a>
+                <a href="brand-book.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Book
+                </a>
+                <a href="market-research.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Research
+                </a>
+                <a href="gap-analysis.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Gap Analysis
+                </a>
+                <a href="market-size.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Size
+                </a>
+                <a href="customer-profiles.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Customer Profiles
+                </a>
+                <a href="competitors.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Competitors
+                </a>
+                <a href="legal-compliance.html" class="nav-item active">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Legal & Compliance
+                </a>
+                <a href="go-to-market.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Go To Market
+                </a>
+                <a href="business-plan.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Business Plan
+                </a>
+                <a href="financial-model.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Financial Model
+                </a>
+                <a href="team.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Team
+                </a>
+                <a href="pitch-deck.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Pitch Deck
+                </a>
+            </nav>
+        </div>
+        <div class="main-content">
+
+                <div class="header">
+                    <div>
+                        <h1>Legal & Compliance</h1>
+                        <p>Regulatory framework and compliance requirements for Deel's global operations.</p>
+                    </div>
+                    <div class="header-badges">
+                        <div class="live-badge">
+                            <span class="dot-green"></span> Live Demo
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h2 class="card-title">Compliance Status</h2>
+                        <div class="compliance-item" style="margin-bottom: 16px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <span>GDPR Compliance</span>
+                                <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: 600;">COMPLIANT</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 100%; background-color: var(--color-emerald);"></div>
+                            </div>
+                        </div>
+                        <div class="compliance-item" style="margin-bottom: 16px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <span>CCPA Compliance</span>
+                                <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: 600;">COMPLIANT</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 100%; background-color: var(--color-emerald);"></div>
+                            </div>
+                        </div>
+                        <div class="compliance-item" style="margin-bottom: 16px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <span>SOC 2 Certification</span>
+                                <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: 600;">CERTIFIED</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 100%; background-color: var(--color-emerald);"></div>
+                            </div>
+                        </div>
+                        <div class="compliance-item">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <span>ISO 27001</span>
+                                <span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: 600;">IN PROGRESS</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 75%; background-color: var(--color-orange);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Key Regulations</h2>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="padding: 12px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                                <div style="font-weight: 600; margin-bottom: 4px;">Employment Laws</div>
+                                <div style="font-size: 12px; color: #6b7280;">FLSA, NLRA, local labor laws in 150+ countries</div>
+                            </div>
+                            <div style="padding: 12px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                                <div style="font-weight: 600; margin-bottom: 4px;">Tax Compliance</div>
+                                <div style="font-size: 12px; color: #6b7280;">Withholding, social security, international tax treaties</div>
+                            </div>
+                            <div style="padding: 12px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                                <div style="font-weight: 600; margin-bottom: 4px;">Data Privacy</div>
+                                <div style="font-size: 12px; color: #6b7280;">GDPR, CCPA, PIPL, and emerging privacy laws</div>
+                            </div>
+                            <div style="padding: 12px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                                <div style="font-weight: 600; margin-bottom: 4px;">Financial Regulations</div>
+                                <div style="font-size: 12px; color: #6b7280;">AML, KYC, cross-border payment regulations</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="grid-column: span 2;">
+                        <h2 class="card-title">Risk Assessment Matrix</h2>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+                            <div style="padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 18px; font-weight: 600; color: #dc2626; margin-bottom: 8px;">HIGH</div>
+                                <div style="font-size: 12px;">Regulatory Changes</div>
+                                <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">Mitigation: Legal team monitoring</div>
+                            </div>
+                            <div style="padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 18px; font-weight: 600; color: #f59e0b; margin-bottom: 8px;">MEDIUM</div>
+                                <div style="font-size: 12px;">Data Security</div>
+                                <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">Mitigation: SOC 2 compliance</div>
+                            </div>
+                            <div style="padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 18px; font-weight: 600; color: #f59e0b; margin-bottom: 8px;">MEDIUM</div>
+                                <div style="font-size: 12px;">Third-party Dependencies</div>
+                                <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">Mitigation: Multiple providers</div>
+                            </div>
+                            <div style="padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 18px; font-weight: 600; color: #16a34a; margin-bottom: 8px;">LOW</div>
+                                <div style="font-size: 12px;">Market Competition</div>
+                                <div style="font-size: 10px; color: #6b7280; margin-top: 4px;">Mitigation: Product differentiation</div>
+                            </div>
+                        </div>
+                    </div>
+                
+        </div>
+    </div>
+
+</body>
+</html>

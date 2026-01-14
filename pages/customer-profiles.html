@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profiles | Competitor Analysis Dashboard</title>
+    <link rel="stylesheet" href="../components/common.css">
+    <script>
+        function setActiveLink() {
+            const currentPath = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes('customer-profiles')) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+    </script>
+</head>
+<body>
+
+    <div class="window-frame">
+        <div class="sidebar">
+            <div class="mac-dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+
+            <div class="company-select">
+                <div class="avatar-box">D</div>
+                <span style="font-weight: 500; font-size: 14px;">Deel</span>
+                <svg class="icon" style="margin-left: auto; color: #9ca3af;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="executive-summary.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Executive Summary
+                </a>
+                <a href="brand-archetype.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Archetype
+                </a>
+                <a href="brand-book.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Book
+                </a>
+                <a href="market-research.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Research
+                </a>
+                <a href="gap-analysis.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Gap Analysis
+                </a>
+                <a href="market-size.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Size
+                </a>
+                <a href="customer-profiles.html" class="nav-item active">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Customer Profiles
+                </a>
+                <a href="competitors.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Competitors
+                </a>
+                <a href="legal-compliance.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Legal & Compliance
+                </a>
+                <a href="go-to-market.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Go To Market
+                </a>
+                <a href="business-plan.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Business Plan
+                </a>
+                <a href="financial-model.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Financial Model
+                </a>
+                <a href="team.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Team
+                </a>
+                <a href="pitch-deck.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Pitch Deck
+                </a>
+            </nav>
+        </div>
+        <div class="main-content">
+
+                <div class="header">
+                    <div>
+                        <h1>Customer Profiles</h1>
+                        <p>Detailed personas of Deel's target customers and their pain points.</p>
+                    </div>
+                    <div class="header-badges">
+                        <div class="live-badge">
+                            <span class="dot-green"></span> Live Demo
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h2 class="card-title">Sarah Chen - Startup Founder</h2>
+                        <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                            <div style="width: 48px; height: 48px; background-color: var(--primary-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 12px;">SC</div>
+                            <div>
+                                <div style="font-weight: 600;">Sarah Chen</div>
+                                <div style="font-size: 12px; color: #6b7280;">CEO, Tech Startup (50 employees)</div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <strong>Pain Points:</strong>
+                            <ul style="margin: 8px 0; padding-left: 20px;">
+                                <li>Complex international hiring processes</li>
+                                <li>Compliance nightmares across multiple countries</li>
+                                <li>Delayed payroll setup for new hires</li>
+                            </ul>
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <strong>Goals:</strong> Scale globally without HR headaches, focus on product development
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 80%; background-color: var(--primary-blue);"></div>
+                        </div>
+                        <div style="font-size: 12px; color: #6b7280; margin-top: 4px;">Deel Fit: 80%</div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Mark Johnson - HR Director</h2>
+                        <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                            <div style="width: 48px; height: 48px; background-color: var(--color-emerald); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 12px;">MJ</div>
+                            <div>
+                                <div style="font-weight: 600;">Mark Johnson</div>
+                                <div style="font-size: 12px; color: #6b7280;">VP HR, Enterprise Corp (5000+ employees)</div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <strong>Pain Points:</strong>
+                            <ul style="margin: 8px 0; padding-left: 20px;">
+                                <li>Managing payroll across 15+ countries</li>
+                                <li>Tax compliance and reporting complexity</li>
+                                <li>Integrating global hires into existing systems</li>
+                            </ul>
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <strong>Goals:</strong> Streamline global operations, reduce compliance risk, improve employee experience
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 95%; background-color: var(--color-emerald);"></div>
+                        </div>
+                        <div style="font-size: 12px; color: #6b7280; margin-top: 4px;">Deel Fit: 95%</div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Alex Rivera - Remote Developer</h2>
+                        <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                            <div style="width: 48px; height: 48px; background-color: var(--color-orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 12px;">AR</div>
+                            <div>
+                                <div style="font-weight: 600;">Alex Rivera</div>
+                                <div style="font-size: 12px; color: #6b7280;">Senior Developer, Freelance (Global)</div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <strong>Pain Points:</strong>
+                            <ul style="margin: 8px 0; padding-left: 20px;">
+                                <li>Delayed payments from international clients</li>
+                                <li>Unclear tax obligations in different countries</li>
+                                <li>Complex contractor agreements</li>
+                            </ul>
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <strong>Goals:</strong> Get paid on time, understand tax responsibilities, focus on coding
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 70%; background-color: var(--color-orange);"></div>
+                        </div>
+                        <div style="font-size: 12px; color: #6b7280; margin-top: 4px;">Deel Fit: 70%</div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Lisa Thompson - Finance Manager</h2>
+                        <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                            <div style="width: 48px; height: 48px; background-color: var(--color-pink); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 12px;">LT</div>
+                            <div>
+                                <div style="font-weight: 600;">Lisa Thompson</div>
+                                <div style="font-size: 12px; color: #6b7280;">CFO, Mid-Market Company (200 employees)</div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <strong>Pain Points:</strong>
+                            <ul style="margin: 8px 0; padding-left: 20px;">
+                                <li>Multi-currency payroll management</li>
+                                <li>Regulatory reporting across jurisdictions</li>
+                                <li>Cash flow forecasting with global payments</li>
+                            </ul>
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <strong>Goals:</strong> Accurate financial reporting, compliance assurance, predictable cash flow
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 85%; background-color: var(--color-pink);"></div>
+                        </div>
+                        <div style="font-size: 12px; color: #6b7280; margin-top: 4px;">Deel Fit: 85%</div>
+                    </div>
+                
+        </div>
+    </div>
+
+</body>
+</html>

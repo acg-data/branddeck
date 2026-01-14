@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Plan | Competitor Analysis Dashboard</title>
+    <link rel="stylesheet" href="../components/common.css">
+    <script>
+        function setActiveLink() {
+            const currentPath = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes('business-plan')) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+    </script>
+</head>
+<body>
+
+    <div class="window-frame">
+        <div class="sidebar">
+            <div class="mac-dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+
+            <div class="company-select">
+                <div class="avatar-box">D</div>
+                <span style="font-weight: 500; font-size: 14px;">Deel</span>
+                <svg class="icon" style="margin-left: auto; color: #9ca3af;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="executive-summary.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Executive Summary
+                </a>
+                <a href="brand-archetype.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Archetype
+                </a>
+                <a href="brand-book.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Brand Book
+                </a>
+                <a href="market-research.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Research
+                </a>
+                <a href="gap-analysis.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Gap Analysis
+                </a>
+                <a href="market-size.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Market Size
+                </a>
+                <a href="customer-profiles.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Customer Profiles
+                </a>
+                <a href="competitors.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Competitors
+                </a>
+                <a href="legal-compliance.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Legal & Compliance
+                </a>
+                <a href="go-to-market.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Go To Market
+                </a>
+                <a href="business-plan.html" class="nav-item active">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Business Plan
+                </a>
+                <a href="financial-model.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Financial Model
+                </a>
+                <a href="team.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Team
+                </a>
+                <a href="pitch-deck.html" class="nav-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Pitch Deck
+                </a>
+            </nav>
+        </div>
+        <div class="main-content">
+
+                <div class="header">
+                    <div>
+                        <h1>Business Plan</h1>
+                        <p>Comprehensive operational and strategic plan for Deel's growth.</p>
+                    </div>
+                    <div class="header-badges">
+                        <div class="live-badge">
+                            <span class="dot-green"></span> Live Demo
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h2 class="card-title">Executive Summary</h2>
+                        <p>Deel is revolutionizing global workforce management by making international employment simple, compliant, and human. Our AI-powered platform enables companies to hire and pay anyone, anywhere, with seamless compliance across 150+ countries.</p>
+                        <div style="margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div class="metric-item">
+                                <div class="metric-value">$2.4B</div>
+                                <div class="metric-label">Company Valuation</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">10K+</div>
+                                <div class="metric-label">Active Customers</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Operations</h2>
+                        <div style="font-size: 14px; line-height: 1.6;">
+                            <p><strong>Technology:</strong> Cloud-native platform with 99.9% uptime, global CDN, and enterprise-grade security.</p>
+                            <p><strong>Support:</strong> 24/7 customer support in multiple languages, dedicated account management for enterprise clients.</p>
+                            <p><strong>Compliance:</strong> Automated tax calculations, real-time regulatory updates, and dedicated compliance team.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Marketing Strategy</h2>
+                        <ul style="list-style: none; padding: 0; font-size: 14px;">
+                            <li style="margin-bottom: 8px;">• Content marketing focused on HR insights and global hiring trends</li>
+                            <li style="margin-bottom: 8px;">• Strategic partnerships with accounting firms and HR consultancies</li>
+                            <li style="margin-bottom: 8px;">• Events and webinars for HR professionals and business leaders</li>
+                            <li>• Social media presence highlighting customer success stories</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h2 class="card-title">Financial Overview</h2>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div class="metric-item">
+                                <div class="metric-value">$50M</div>
+                                <div class="metric-label">2024 Revenue</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">300%</div>
+                                <div class="metric-label">IRR Target</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">18</div>
+                                <div class="metric-label">Months to Break-even</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">5x</div>
+                                <div class="metric-label">Revenue Multiple</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="grid-column: span 2;">
+                        <h2 class="card-title">Business Model Canvas</h2>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+                            <div style="padding: 12px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                                <div style="font-weight: 600; margin-bottom: 8px;">Value Propositions</div>
+                                <ul style="font-size: 12px; margin: 0; padding-left: 16px;">
+                                    <li>Global compliance automation</li>
+                                    <li>Seamless cross-border payments</li>
+                                    <li>AI-powered HR insights</li>
+                                </ul>
+                            </div>
+                            <div style="padding: 12px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                                <div style="font-weight: 600; margin-bottom: 8px;">Customer Segments</div>
+                                <ul style="font-size: 12px; margin: 0; padding-left: 16px;">
+                                    <li>Startups scaling globally</li>
+                                    <li>Enterprise corporations</li>
+                                    <li>Remote-first companies</li>
+                                </ul>
+                            </div>
+                            <div style="padding: 12px; border: 1px solid #e5e7eb; border-radius: 8px;">
+                                <div style="font-weight: 600; margin-bottom: 8px;">Revenue Streams</div>
+                                <ul style="font-size: 12px; margin: 0; padding-left: 16px;">
+                                    <li>Subscription fees</li>
+                                    <li>Transaction processing</li>
+                                    <li>Premium features</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+        </div>
+    </div>
+
+</body>
+</html>
