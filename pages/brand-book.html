@@ -73,34 +73,34 @@
 
         .color-palette {
             display: flex;
-            gap: 8px;
+            gap: 12px;
             flex-direction: column;
         }
 
         .color-row {
             display: flex;
-            gap: 8px;
-            align-items: center;
+            gap: 12px;
+            align-items: stretch;
         }
 
         .color-swatch {
             flex: 1;
-            height: 32px;
-            border-radius: 6px;
+            height: 56px;
+            border-radius: 8px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
+            padding-bottom: 8px;
             font-size: 10px;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
-        .color-label {
-            font-size: 10px;
-            color: #6b7280;
-            width: 60px;
-            flex-shrink: 0;
+        .color-swatch span:first-child {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
         }
 
         .brand-preview {
@@ -337,24 +337,26 @@
                                 <div class="theme-vibe">Reliable, Corporate, Established</div>
                                 <div class="color-palette">
                                     <div class="color-row">
-                                        <span class="color-label">Primary</span>
-                                        <div class="color-swatch" style="background: #2563eb; color: white;">#2563eb</div>
-                                    </div>
-                                    <div class="color-row">
-                                        <span class="color-label">Secondary</span>
-                                        <div class="color-swatch" style="background: #1e40af; color: white;">#1e40af</div>
-                                    </div>
-                                    <div class="color-row">
-                                        <span class="color-label">Accent</span>
-                                        <div class="color-swatch" style="background: #3b82f6; color: white;">#3b82f6</div>
-                                    </div>
-                                    <div class="color-row">
-                                        <span class="color-label">Light</span>
-                                        <div class="color-swatch" style="background: #dbeafe; color: #1e40af;">#dbeafe</div>
-                                    </div>
-                                    <div class="color-row">
-                                        <span class="color-label">Dark</span>
-                                        <div class="color-swatch" style="background: #1e3a8a; color: white;">#1e3a8a</div>
+                                        <div class="color-swatch" style="background: #2563eb; color: white;">
+                                            <span>Primary</span>
+                                            <span>#2563eb</span>
+                                        </div>
+                                        <div class="color-swatch" style="background: #1e40af; color: white;">
+                                            <span>Secondary</span>
+                                            <span>#1e40af</span>
+                                        </div>
+                                        <div class="color-swatch" style="background: #3b82f6; color: white;">
+                                            <span>Accent</span>
+                                            <span>#3b82f6</span>
+                                        </div>
+                                        <div class="color-swatch" style="background: #dbeafe; color: #1e40af;">
+                                            <span>Light</span>
+                                            <span>#dbeafe</span>
+                                        </div>
+                                        <div class="color-swatch" style="background: #1e3a8a; color: white;">
+                                            <span>Dark</span>
+                                            <span>#1e3a8a</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -367,24 +369,26 @@
                                 <div class="theme-vibe">Fresh, Sustainable, Expanding</div>
                                 <div class="color-palette">
                                     <div class="color-row">
-                                        <span class="color-label">Primary</span>
-                                        <div class="color-swatch" style="background: #10b981; color: white;">#10b981</div>
-                                    </div>
-                                    <div class="color-row">
-                                        <span class="color-label">Secondary</span>
-                                        <div class="color-swatch" style="background: #059669; color: white;">#059669</div>
-                                    </div>
-                                    <div class="color-row">
-                                        <span class="color-label">Accent</span>
-                                        <div class="color-swatch" style="background: #34d399; color: #064e3b;">#34d399</div>
-                                    </div>
-                                    <div class="color-row">
-                                        <span class="color-label">Light</span>
-                                        <div class="color-swatch" style="background: #d1fae5; color: #065f46;">#d1fae5</div>
-                                    </div>
-                                    <div class="color-row">
-                                        <span class="color-label">Dark</span>
-                                        <div class="color-swatch" style="background: #064e3b; color: white;">#064e3b</div>
+                                        <div class="color-swatch" style="background: #10b981; color: white;">
+                                            <span>Primary</span>
+                                            <span>#10b981</span>
+                                        </div>
+                                        <div class="color-swatch" style="background: #059669; color: white;">
+                                            <span>Secondary</span>
+                                            <span>#059669</span>
+                                        </div>
+                                        <div class="color-swatch" style="background: #34d399; color: #064e3b;">
+                                            <span>Accent</span>
+                                            <span>#34d399</span>
+                                        </div>
+                                        <div class="color-swatch" style="background: #d1fae5; color: #065f46;">
+                                            <span>Light</span>
+                                            <span>#d1fae5</span>
+                                        </div>
+                                        <div class="color-swatch" style="background: #064e3b; color: white;">
+                                            <span>Dark</span>
+                                            <span>#064e3b</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -397,24 +401,26 @@
                                 <div class="theme-vibe">Modern, AI-Forward, Creative</div>
                                 <div class="color-palette">
                                     <div class="color-row">
-                                        <span class="color-label">Primary</span>
-                                        <div class="color-swatch" style="background: #8b5cf6; color: white;">#8b5cf6</div>
-                                    </div>
-                                    <div class="color-row">
-                                        <span class="color-label">Secondary</span>
-                                        <div class="color-swatch" style="background: #7c3aed; color: white;">#7c3aed</div>
-                                    </div>
-                                    <div class="color-row">
-                                        <span class="color-label">Accent</span>
-                                        <div class="color-swatch" style="background: #a78bfa; color: #5b21b6;">#a78bfa</div>
-                                    </div>
-                                    <div class="color-row">
-                                        <span class="color-label">Light</span>
-                                        <div class="color-swatch" style="background: #ede9fe; color: #5b21b6;">#ede9fe</div>
-                                    </div>
-                                    <div class="color-row">
-                                        <span class="color-label">Dark</span>
-                                        <div class="color-swatch" style="background: #5b21b6; color: white;">#5b21b6</div>
+                                        <div class="color-swatch" style="background: #8b5cf6; color: white;">
+                                            <span>Primary</span>
+                                            <span>#8b5cf6</span>
+                                        </div>
+                                        <div class="color-swatch" style="background: #7c3aed; color: white;">
+                                            <span>Secondary</span>
+                                            <span>#7c3aed</span>
+                                        </div>
+                                        <div class="color-swatch" style="background: #a78bfa; color: #5b21b6;">
+                                            <span>Accent</span>
+                                            <span>#a78bfa</span>
+                                        </div>
+                                        <div class="color-swatch" style="background: #ede9fe; color: #5b21b6;">
+                                            <span>Light</span>
+                                            <span>#ede9fe</span>
+                                        </div>
+                                        <div class="color-swatch" style="background: #5b21b6; color: white;">
+                                            <span>Dark</span>
+                                            <span>#5b21b6</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
